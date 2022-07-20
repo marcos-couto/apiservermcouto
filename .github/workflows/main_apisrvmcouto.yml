@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'apisrvmcouto'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_350E36EABA894CA59AAE7329DC216163 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3DB9A9F4FC5A4672B1E7BDE8008FD77C }}
           package: .
