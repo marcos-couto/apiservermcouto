@@ -1,0 +1,17 @@
+{
+  "flores": {
+    "pattern": [
+      {
+        "id": "7bc9ea674239945cdff65c03",
+        "nome": "Margarida",
+        "datavalidade": "2020-11-23",
+        "preco": "R$ 25,00",
+        "lote": "180",
+        "quantidade": "100",
+        "fornecedor": "Jarden",
+        "cidade": "Holambra",
+        "estado": "SP"
+      }
+    ]
+  }
+}

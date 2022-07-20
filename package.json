@@ -1,0 +1,20 @@
+{
+  "name": "APIServer",
+  "version": "1.0.0",
+  "description": "API Server example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node Apiserver",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Marcos Couto",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.2.3",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "uuid": "^3.3.3"
+  }
+}
