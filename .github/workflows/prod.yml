@@ -1,0 +1,33 @@
+name: Pipeline CI/CD - Prod
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy: 
+    name: Iniciando build e deploy
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Configurando a versão do NodeJS
+      uses: actions/setup-node@v1
+      with: 
+        node-version: '16.x'
+
+    - name: Estamos instalando dependências e compilando o projeto
+      run: |
+        npm install
+        npm run build --if-preset
+
+    - name: Publicando na Azure
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: .
+### Prof. Douglas Morais
